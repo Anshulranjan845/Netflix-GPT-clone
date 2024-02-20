@@ -9,7 +9,7 @@ const VideoMainContainer = () => {
 
   const newList = useSelector((store)=>store.movies?.getPopularMovie);
     if(!newList) return;
-    const randomList = newList[10];
+    const randomList = newList[18];
     if(!randomList) return;
     const {original_title , overview , id} = randomList
    
