@@ -3,12 +3,14 @@ import AllLang from "../utils/LanguageConstant"
 import { useEffect, useRef } from "react"
 import openai from "../utils/openai"
 import { API_OPTIONS } from "../utils/Constants"
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import React from "react"; 
+import { addMovieDesc } from "../utils/GptSearchToggleSlice"
 
 const GPTSeachInput = () => {
 
   const inputRef = useRef(null);
+  const dispatch = useDispatch();
 
   const LangConfig = useSelector(store=>store.Language.LangInitial);
 
@@ -25,8 +27,7 @@ const GPTSeachInput = () => {
     },[]);
   }
 
-  const handleMovieList = async ()=>{
-    console.log(inputRef.current.value);
+  const handleMovieList = async()=>{
 
     let gptSearch = "Act as a movie recommendation system and suggest some movies for the query"
     +inputRef.current.value+
@@ -44,6 +45,10 @@ const GPTSeachInput = () => {
     const NewMovie = SearchedMovies.map((movie)=>(SearchMovieResult(movie)));
 
     const MovieResult = await Promise.all(NewMovie);
+
+    dispatch(addMovieDesc({movieName:SearchedMovies , movieList:MovieResult}))
+
+
     
   }
   return (

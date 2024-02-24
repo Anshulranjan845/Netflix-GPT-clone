@@ -8,9 +8,9 @@ import { useSelector } from 'react-redux';
 const VideoTitle = ({title,overview}) => {
   const LangConfig = useSelector(store=>store.Language.LangInitial);
   return (
-    <div className='flex flex-col px-8 py-[250px] w-1/2 font-sans absolute w-screen aspect-video bg-gradient-to-r from-black'>
+    <div className='flex flex-col pb-8 py-[250px] w-1/2 font-sans absolute w-screen aspect-video bg-gradient-to-r from-black'>
   
-      <h1 className='font-bold text-6xl mb-4 text-white my-4 mr-[66%] w-1/3'>{title}</h1>
+      <h1 className='font-bold text-6xl text-white my-4 mr-[66%]'>{title}</h1>
       <p className='font-semibold text-sm text-gray-400 w-1/2'>{overview}</p>
       <div className='pt-8 flex flex-row ml-4'>
         <button className='bg-white p-[10px] w-[100px] mr-4 rounded-md bg-opacity-90 hover:bg-opacity-60'>
