@@ -5,11 +5,11 @@ import React from "react";
 
 
 const VideoMainContainer = () => {
-  //Math.floor(Math.random() * newList.length)
+ //Math.floor(Math.random() * newList.length)
 
   const newList = useSelector((store)=>store.movies?.getPopularMovie);
     if(!newList) return;
-    const randomList = newList[18];
+    const randomList = newList[12];
     if(!randomList) return;
     const {original_title , overview , id} = randomList
    

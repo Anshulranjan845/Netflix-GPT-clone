@@ -3,6 +3,7 @@ import { API_OPTIONS } from '../utils/Constants'
 import { addTopRatedMovies } from '../utils/movieSlice'
 import { useEffect } from 'react';
 
+ //eslint-disable-next-line
 const useTopRatedDesc = () => {
     const dispatch = useDispatch();
     const getTopRatedMovies = async() =>{

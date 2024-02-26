@@ -2,6 +2,7 @@ import React from 'react'
 import Login from './Login'
 import Browse from './Browse'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import MovieDesc from './MovieDesc';
 
 const Body = () => {
 
@@ -12,8 +13,13 @@ const Body = () => {
       },
       {
         path: "/browse",
-        element:<Browse />
+        element:<Browse />,
+        
       },
+      {
+        path:"/movies/:id",
+        element:<MovieDesc />
+      }
     ]);
     return (
       <div>

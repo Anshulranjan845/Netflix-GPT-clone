@@ -11,6 +11,7 @@ import usePopularDesc from '../Hooks/usePopularMovies'
 
 
 
+
 const Browse = () => {
   
   const GptTogglePage = useSelector(store=>store.GptSearchToggle.GptToggle);
@@ -21,12 +22,12 @@ const Browse = () => {
   return (
     <div>
      <Header/>
-     {GptTogglePage ? (<GptSearchPage />)
-     :(
-     <>
-      <VideoMainContainer />
-      <VideoSecondaryContainer />
-      </>)}
+      {GptTogglePage ? (<GptSearchPage />)
+      :(
+      <>
+       <VideoMainContainer />
+       <VideoSecondaryContainer />
+       </>)}
     </div>
   )
 }

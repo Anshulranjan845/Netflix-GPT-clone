@@ -64,6 +64,12 @@ const Header = () => {
     <div className='absolute z-40 bg-center text-white px-2 mx-2 w-screen bg-gradient-to-b from-black flex justify-between'>
       <img className='w-[180px]' src="https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png" 
            alt="Netflix-logo" />
+           {user&& <ul className='text-white text-sm flex flex-row justify-start items-center mr-[35%]'>
+            <li className='px-4 cursor-pointer' onClick={()=>navigate("/browse")}>Home</li>
+            <li className='px-4 text-gray-200'>TV Shows</li>
+            <li className='pr-4  text-gray-200'>Movies</li>
+        </ul>}
+      
         {user && <div className='flex p-2 m-2'>
         <select className="bg-black m-2 p-2 bg-opacity-30 rounded-md" onChange={handleLangValue}>
         {LANGUAGE_CONSTANT.map(lang =><option  key={lang.identifier} value={lang.identifier}>{lang.name}</option>)}

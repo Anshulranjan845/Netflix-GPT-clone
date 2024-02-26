@@ -3,7 +3,7 @@ import { API_OPTIONS } from "../utils/Constants";
 import { useEffect } from "react";
 import { addPopularMovies } from "../utils/movieSlice";
 
-
+ //eslint-disable-next-line
 const usePopularDesc = () => {
     const dispatch = useDispatch();
     const getPopularMovies = async() =>{
