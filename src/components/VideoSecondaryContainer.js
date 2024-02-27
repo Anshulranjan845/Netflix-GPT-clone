@@ -7,6 +7,7 @@ const VideoSecondaryContainer = () => {
   const LangConfig = useSelector(store=>store.Language.LangInitial);
 
   const MovieListRedux = useSelector(store=>store.movies);
+  if(!MovieListRedux) return null;
   return (
     <div className='bg-black'>
       <div className='-mt-52 relative z-10'>

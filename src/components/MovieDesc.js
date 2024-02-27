@@ -26,13 +26,12 @@ const MovieDesc = () => {
     <Link to="/"><span>Home</span></Link> 
      </div>
     <iframe
-       
-    className="w-screen h-max-full aspect-video bg-gradient-to-r from-black" 
-    src={"https://www.youtube.com/embed/"+movie?.key+"?&autoplay=1&mute=1&controls=0&si=K34GLD8HCxdGVtKZ"} 
-    title="YouTube video player"  
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowFullScreen>
-  </iframe>
+        className="w-screen h-max-full aspect-video bg-gradient-to-r from-black" 
+        src={"https://www.youtube.com/embed/"+movie?.key+"?&autoplay=1&mute=1&controls=0&si=K34GLD8HCxdGVtKZ"} 
+        title="YouTube video player"  
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowFullScreen>
+   </iframe>
  
     </div>
   )

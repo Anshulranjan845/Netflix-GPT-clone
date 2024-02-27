@@ -1,5 +1,4 @@
 import React from 'react'
-import { IMG_MOVIE_URL } from '../utils/Constants'
 import MovieCard from './MovieCard';
 import { Link } from 'react-router-dom';
 
