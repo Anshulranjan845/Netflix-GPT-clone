@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import Login from './Login'
 import Browse from './Browse'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import MovieDesc from './MovieDesc';
+const Moviedescription = lazy(()=>import('./MovieDesc'))
 
 const Body = () => {
 
@@ -18,7 +18,7 @@ const Body = () => {
       },
       {
         path:"/movies/:id",
-        element:<MovieDesc />
+        element:<Suspense fallback={<h1 className='text-2xl'>loading....please wait</h1>}><Moviedescription /></Suspense>
       }
     ]);
     return (
