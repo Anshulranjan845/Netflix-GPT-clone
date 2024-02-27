@@ -8,6 +8,7 @@ import useTopRatedDesc from '../Hooks/useTopRatedMovies'
 import useUpcomingDesc from '../Hooks/useUpcomingMovies'
 import useMovieDesc from '../Hooks/useMovieDesc'
 import usePopularDesc from '../Hooks/usePopularMovies'
+import Footer from './Footer'
 
 
 
@@ -29,6 +30,7 @@ const Browse = () => {
       <>
        <VideoMainContainer />
        <VideoSecondaryContainer />
+       <Footer />
        </>)}
     </div>
   )

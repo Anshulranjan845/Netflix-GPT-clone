@@ -9,7 +9,7 @@ const VideoTitle = ({title,overview}) => {
   const LangConfig = useSelector(store=>store.Language.LangInitial);
   return (
     <div className='flex flex-col pb-8 py-[250px] font-sans absolute w-screen aspect-video bg-gradient-to-r from-black'>
-     <div className='absolute w-1/3 top-[25%] ml-4'>
+     <div className='absolute w-1/2 top-[25%] ml-4'>
      <h1 className='font-bold text-6xl text-white my-4'>{title}</h1>
      <p className='font-semibold text-sm text-gray-400'>{overview}</p>
      </div>
