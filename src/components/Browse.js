@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import Header from './Header'
 import VideoMainContainer from './VideoMainContainer'
 import VideoSecondaryContainer from './VideoSecondaryContainer'
@@ -12,7 +12,7 @@ import Footer from './Footer'
 
 
 
-
+const GptsearchPage = lazy(()=>import('./GptSearchPage'))
 const Browse = () => {
   
   const GptTogglePage = useSelector(store=>store.GptSearchToggle.GptToggle);
@@ -25,7 +25,9 @@ const Browse = () => {
   return (
     <div>
      <Header/>
-      {GptTogglePage ? (<GptSearchPage />)
+      {GptTogglePage ? (<Suspense fallback={<h2 className='text-2xl'>Loading .....</h2>}>
+        <GptsearchPage />
+      </Suspense>)
       :(
       <>
        <VideoMainContainer />
